@@ -1,4 +1,4 @@
-name: NanoPi R4S Docker FusionWRT
+name: NanoPi R4S Docker Openwrt
 
 on:
   repository_dispatch:
