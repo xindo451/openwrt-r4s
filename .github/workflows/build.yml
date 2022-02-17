@@ -143,7 +143,7 @@ jobs:
   Upload:
     needs: [Build]
     runs-on: ubuntu-20.04
-    if: github.repository == 'xindo451/openwrt-r4s
+    if: github.repository == 'xindo451/openwrt-r4s'
     steps:
       - name: Checkout
         uses: actions/checkout@main
