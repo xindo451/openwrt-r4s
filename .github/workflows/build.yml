@@ -65,7 +65,7 @@ jobs:
     - name: Update Feeds
       id: update
       run: |
-        pushd feeds/luci/applications/
+        pushd openwrt/feeds/luci/applications/
         rm -rf luci-app-dockerman
         svn co https://github.com/lisaac/luci-app-dockerman/tree/trunk/applications/luci-app-dockerman
         svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
