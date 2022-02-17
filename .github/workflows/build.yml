@@ -69,7 +69,7 @@ jobs:
         ./scripts/feeds update -a
         pushd feeds/luci/applications
         rm -rf luci-app-dockerman
-        svn co https://github.com/lisaac/luci-app-dockerman/tree/trunk/applications/luci-app-dockerman
+        svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
         svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
         svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
         popd
