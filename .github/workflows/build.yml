@@ -65,13 +65,13 @@ jobs:
     - name: Update Feeds
       id: update
       run: |
-	    pushd feeds/luci/applications/
-	    rm -rf luci-app-dockerman
-		svn co https://github.com/lisaac/luci-app-dockerman/tree/trunk/applications/luci-app-dockerman
-		svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
-		svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+        pushd feeds/luci/applications/
+        rm -rf luci-app-dockerman
+        svn co https://github.com/lisaac/luci-app-dockerman/tree/trunk/applications/luci-app-dockerman
+        svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
+        svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
         popd
- 		
+
         cd openwrt
         echo "OPENWRTROOT=$PWD" >> $GITHUB_ENV
         echo "::set-output name=OPENWRTROOT::$(echo $PWD)"
