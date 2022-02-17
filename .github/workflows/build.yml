@@ -72,7 +72,7 @@ jobs:
         svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
         svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
         svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-diskman
-        snv co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
+        svn co https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-dockerman
         popd
         ./scripts/feeds update -a luci
         
