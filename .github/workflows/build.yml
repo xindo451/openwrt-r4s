@@ -10,7 +10,7 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: master
+  REPO_BRANCH: openwrt-21.02
   CONFIG_FILE: configs/r4s.config
   UPLOAD_WETRANSFER: true
   UPLOAD_COWTRANSFER: true
@@ -58,11 +58,11 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         pushd feeds/luci/applications
-        rm -rf luci-app-dockerman
+        #rm -rf luci-app-dockerman
         svn co https://github.com/k-szuster/luci-access-control/trunk/luci-app-access-control
         svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
         svn co https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman
-        svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
+        #svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman
         popd
         ./scripts/feeds update -a luci
         
