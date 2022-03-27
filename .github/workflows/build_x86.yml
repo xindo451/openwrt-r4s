@@ -17,6 +17,7 @@ env:
   UPLOAD_COWTRANSFER: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
+  ARCHITECTURE: amd64
 
 jobs:
   Build:
@@ -80,7 +81,7 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE $OPENWRTROOT/.config
         chmod +x scripts/*.sh
         cd $OPENWRTROOT
-        ../scripts/preset-clash-core.sh 386
+        ../scripts/preset-clash-core.sh $ARCHITECTURE
         make defconfig
     - name: Download Package
       id: package
